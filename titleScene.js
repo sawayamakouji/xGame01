@@ -10,7 +10,7 @@ export default class TitleScene extends Phaser.Scene {
       // 背景
       this.add.image(width / 2, height / 2, 'titleBackground').setDisplaySize(width, height);
   
-      // タイトルテキスト
+      // タイトル テキスト
       this.add.text(width / 2, height * 0.5 / 3, 'Solitary Struggle of Christmas', {
         fontSize: '60px',
         fill: '#ffffff'

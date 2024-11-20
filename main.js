@@ -13,7 +13,7 @@ const config = {
       debug: false
     }
   },
-  scene: [LoadingScene, TitleScene, GameScene] // シーンを登録
+  scene: [LoadingScene, TitleScene, GameScene] // シーンを 登録
 };
 
 const game = new Phaser.Game(config);

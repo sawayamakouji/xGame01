@@ -4,7 +4,7 @@ export default class LoadingScene extends Phaser.Scene {
     }
   
     preload() {
-      // ローディングバーの作成
+      // ローディングバーの 作成
       const width = this.cameras.main.width;
       const height = this.cameras.main.height;
       const progressBar = this.add.graphics();

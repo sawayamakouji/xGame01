@@ -8,7 +8,7 @@ export default class GameScene extends Phaser.Scene {
   preload() {
     // レベルアップ音を読み込み
     this.load.audio('levelUpSound', 'assets/level_up.mp3');
-    // 星のエフェクト用スプライトを読み込み
+    // 星のエフェクト用 スプライトを読み込み
     this.load.image('star', 'assets/star.png');
   }
 
