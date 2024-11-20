@@ -3,11 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phaser Game</title>
-  <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
-  <script type="module" src="./main.js"></script>
+  <title>Phaser App</title>
+  <script src="node_modules/phaser/dist/phaser.js"></script> <!-- Phaserライブラリを読み込む -->
+  <style>
+    /* 背景を黒くする */
+    body {
+      margin: 0; /* デフォルトの余白を削除 */
+      padding: 0;
+      background-color: black; /* 背景色を黒に設定 */
+      display: flex;
+      justify-content: center; /* 水平方向の中央配置 */
+      align-items: center; /* 垂直方向の中央配置 */
+      height: 100vh; /* ウィンドウ全体の高さ */
+      overflow: hidden; /* スクロールバーを隠す */
+    }
+
+    canvas {
+      display: block; /* 不要な余白を削除 */
+    }
+  </style>
 </head>
 <body>
+  <script src="game.js" type="module"></script> <!-- ゲームロジックを読み込む -->
 </body>
-
 </html>

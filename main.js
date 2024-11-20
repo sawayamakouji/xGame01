@@ -1,19 +1,22 @@
-import LoadingScene from './loadingScene.js';
-import TitleScene from './titleScene.js';
-import GameScene from './gameScene.js';
+const { app, BrowserWindow } = require('electron'); // CommonJS形式
 
-const config = {
-  type: Phaser.AUTO,
-  width: 1200,
-  height: 600,
-  physics: {
-    default: 'arcade',
-    arcade: {
-      gravity: { y: 0 },
-      debug: false
+let mainWindow;
+
+app.whenReady().then(() => {
+  mainWindow = new BrowserWindow({
+    width: 1850, // ウィンドウの幅
+    height: 650, // ウィンドウの高さ
+    resizable: true, // ウィンドウをリサイズ可能
+    fullscreenable: false, // フルスクリーンを禁止
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
     }
-  },
-  scene: [LoadingScene, TitleScene, GameScene] // シーンを 登録
-};
+  });
 
-const game = new Phaser.Game(config);
+  mainWindow.loadFile('index.html'); // HTMLファイルを読み込む
+});
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') app.quit();
+});

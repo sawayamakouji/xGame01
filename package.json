@@ -1,15 +1,15 @@
 {
   "name": "phaser-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "phaser": "^3.87.0"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0"
   }
 }
